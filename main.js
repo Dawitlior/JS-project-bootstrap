@@ -45,13 +45,12 @@ catch (error) {
 
 
 
-
-
+let myDiv = document.getElementById("theMainDiv");
+let counter = 0;
 function printTheItemsOnScreen(){
 someGetFunction().then((result)=>{
   result.forEach(item => {
-    myDivTabPhone.innerHTML +=
-    this.brand + this.color + this.createdAt
+    myDiv.innerHTML += 
   });
 })
 }
