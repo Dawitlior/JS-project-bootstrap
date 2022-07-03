@@ -11,11 +11,16 @@ document.getElementById("myDivTabPhone").innerHTML = htmlFromTemplate;
 someGetFunction()
 
 function cardTemplate(devices){
-  return `<div class="dawitCard">
+  return (theMainDiv.innerHTML +=
+    `<div class="card col-md-4 col-sm-12">
+  <div>
+  <img class="card-img col-md-4" src="${SOME_IMG}">
+  </div>
   <div>brand : ${devices.brand}</div>
   <div>color : ${devices.color}</div>
   <div>price : ${devices.price}</div>
-  </div>`
+  </div>
+  `);
 }
 cardTemplate()
 
