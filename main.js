@@ -16,9 +16,9 @@ function cardTemplate(devices) {
   <div>
   <img class="card-img col-md-4" src="${SOME_IMG}">
   </div>
+  <div>price : ${devices.price}</div>
   <div>brand : ${devices.brand}</div>
   <div>color : ${devices.color}</div>
-  <div>price : ${devices.price}</div>
   <br><br><br>
   </div>
   `);
