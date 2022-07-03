@@ -1,18 +1,19 @@
-const BASIC_API ="https://my-json-server.typicode.com/Jeck99/fake-server/devices";
+const BASIC_API =
+  "https://my-json-server.typicode.com/Jeck99/fake-server/devices";
+const SOME_IMG =
+  "https://www.digitaltrends.com/wp-content/uploads/2021/09/iphone-13-pro-review-dan-baker-35.jpg?p=1";
 
-
-async function someGetFunction(htmlFromTemplate = ""){
-let devices = await fetch(BASIC_API).then(res=>res.json())
-devices.forEach(devices =>{
-  htmlFromTemplate+=cardTemplate(devices)
-});
-document.getElementById("myDivTabPhone").innerHTML = htmlFromTemplate;
+async function someGetFunction(htmlFromTemplate = "") {
+  let devices = await fetch(BASIC_API).then((res) => res.json());
+  devices.forEach((devices) => {
+    htmlFromTemplate += cardTemplate(devices);
+  });
+  document.getElementById("myDivTabPhone").innerHTML = htmlFromTemplate;
 }
-someGetFunction()
+someGetFunction();
 
-function cardTemplate(devices){
-  return (theMainDiv.innerHTML +=
-    `<div class="card col-md-4 col-sm-12">
+function cardTemplate(devices) {
+  return (theMainDiv.innerHTML += `<div class="card col-md-4 col-sm-12">
   <div>
   <img class="card-img col-md-4" src="${SOME_IMG}">
   </div>
@@ -22,23 +23,19 @@ function cardTemplate(devices){
   </div>
   `);
 }
-cardTemplate()
-
-
-
-
+cardTemplate();
 
 // async function postTheMobileFunction() {
 //   try {
 //     // const data = {
 //       // phone: {
-//       // brand: 
-//       // color: 
-//       // createdAt: 
-//       // id: 
-//       // isAvailable: 
-//       // picture: 
-//       // price: 
+//       // brand:
+//       // color:
+//       // createdAt:
+//       // id:
+//       // isAvailable:
+//       // picture:
+//       // price:
 //       // ram:
 //     // },
 //   // };
@@ -47,20 +44,18 @@ cardTemplate()
 //     body: JSON.stringify(data),
 //     headers: { "content-type": "application/json" },
 //   });
-// } 
+// }
 // catch (error) {
-//   alert("sorry about the error");} 
+//   alert("sorry about the error");}
 //   finally {}
 // }
-
-
 
 // let myDiv = document.getElementById("theMainDiv");
 // let counter = 0;
 // function printTheItemsOnScreen(){
 // someGetFunction().then((result)=>{
 //   result.forEach(item => {
-//     myDiv.innerHTML += 
+//     myDiv.innerHTML +=
 //   });
 // })
 // }
