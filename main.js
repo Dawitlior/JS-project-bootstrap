@@ -1,15 +1,6 @@
 const BASIC_API ="https://my-json-server.typicode.com/Jeck99/fake-server/devices";
 
 
-
-function cardTemplate(devices){
-  return `<div class="dawitCard">
-  <div>brand : ${devices.brand}</div>
-  <div>color : ${devices.color}</div>
-  <div>price : ${devices.price}</div>
-  </div>`
-}
-
 async function someGetFunction(htmlFromTemplate = ""){
 let devices = await fetch(BASIC_API).then(res=>res.json())
 devices.forEach(devices =>{
@@ -18,6 +9,15 @@ devices.forEach(devices =>{
 document.getElementById("myDivTabPhone").innerHTML = htmlFromTemplate;
 }
 someGetFunction()
+
+function cardTemplate(devices){
+  return `<div class="dawitCard">
+  <div>brand : ${devices.brand}</div>
+  <div>color : ${devices.color}</div>
+  <div>price : ${devices.price}</div>
+  </div>`
+}
+cardTemplate()
 
 
 
