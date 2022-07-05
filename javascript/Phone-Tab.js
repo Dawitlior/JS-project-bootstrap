@@ -7,37 +7,45 @@ async function getCardsAndPrint() {
   let myMainPhoneTabDiv = document.getElementById("phoneTabId");
   const MY_LOADING_GIPY = document.getElementById("loading");
   try {
-    MY_LOADING_GIPY.style.display = true;
+    MY_LOADING_GIPY.innerHTML =
+      "<img style='width:100vw' src='/loading.gif' />"; 
     return await fetch(BASIC_API)
       .then((res) => res.json())
       .then((res) => {
         res.forEach((element) => {
-          myMainPhoneTabDiv.innerHTML += `<div class="card col-md-4 col-sm-12 bg-black text-white text-start  ">
+          myMainPhoneTabDiv.innerHTML +=
+          
+  `<div class="card col-md-4 col-sm-12  bg-black text-white text-start  ">
+
    <div>
    <img class="card-img col-md-4" src="${SOME_IMG}">
   </div>
+
    <div>brand : ${element.brand}</div>
+
     <div>createdAt : ${element.createdAt}</div>
+
    <div>color : ${element.color}</div>
+
    <div>ram : ${element.ram}</div>
+
    <div>isAvailable : ${element.isAvailable}</div>
+
    <div>price : ${element.price}</div>
-   <div"><button   class="btn btn-warning type="button"><strong>I'm intrusting </strong></button></div>
-   <br><br><br>
+
+   <div><button class="btn btn-warning" type="button"><strong>I'm intrusting </strong></button></div>
+   
    </div>
    `;
         });
       });
-  } catch (error) {
+  } 
+  catch (error) {
     alert(error);
-  } finally {
-    MY_LOADING_GIPY.style.display = false;
+  } 
+  finally {
+    loading.innerHTML = "";
   }
 }
  getCardsAndPrint();
 
- async function getTheUsersFunction(){
-  return await fetch(BASIC_API)
-  .then(res=>console.log(res.json()))
-}
-getTheUsersFunction();
