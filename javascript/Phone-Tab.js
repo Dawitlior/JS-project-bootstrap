@@ -1,8 +1,11 @@
-const BASIC_API =
-  "https://my-json-server.typicode.com/Jeck99/fake-server/devices";
-const SOME_IMG =
-  "https://www.digitaltrends.com/wp-content/uploads/2021/09/iphone-13-pro-review-dan-baker-35.jpg?p=1";
-
+const BASIC_API = "https://my-json-server.typicode.com/Jeck99/fake-server/devices";
+const SOME_IMG = "https://www.digitaltrends.com/wp-content/uploads/2021/09/iphone-13-pro-review-dan-baker-35.jpg?p=1";
+let arrayImg = [
+  "../images/array-images-tabs/samsung-galaxy-s9-grey-3448.webp",
+  "../images/array-images-tabs/samsung-galaxy-s9-gold-3448.webp",
+  "../images/array-images-tabs/apple-white-image-33.jpg",
+];
+let counter = 0;
 async function getCardsAndPrint() {
   let myMainPhoneTabDiv = document.getElementById("phoneTabId");
   const MY_LOADING_GIPY = document.getElementById("loading");
@@ -13,14 +16,11 @@ async function getCardsAndPrint() {
       .then((res) => res.json())
       .then((res) => {
         res.forEach((element) => {
-          myMainPhoneTabDiv.innerHTML +=
-          
-  `<div class="card col-md-4 col-sm-12  bg-black text-white text-start  ">
+          myMainPhoneTabDiv.innerHTML += `<div class="card col-md-4 col-sm-12  bg-black text-white text-start  ">
 
    <div>
-   <img class="card-img col-md-4" src="${SOME_IMG}">
+   <img class="card-img" src="${SOME_IMG}">
   </div>
-
    <div>brand : ${element.brand}</div>
 
     <div>createdAt : ${element.createdAt}</div>
