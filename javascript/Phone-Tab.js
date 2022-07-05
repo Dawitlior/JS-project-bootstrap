@@ -12,7 +12,7 @@ async function getCardsAndPrint() {
       .then((res) => res.json())
       .then((res) => {
         res.forEach((element) => {
-          myMainPhoneTabDiv.innerHTML += `<div class="card col-md-4 col-sm-12 ">
+          myMainPhoneTabDiv.innerHTML += `<div class="card col-md-4 col-sm-12 bg-black text-white text-start  ">
    <div>
    <img class="card-img col-md-4" src="${SOME_IMG}">
   </div>
@@ -22,7 +22,7 @@ async function getCardsAndPrint() {
    <div>ram : ${element.ram}</div>
    <div>isAvailable : ${element.isAvailable}</div>
    <div>price : ${element.price}</div>
-   <div><button type="submit" class="btn btn-warning"><strong>I'm intrusting </strong></button></div>
+   <div"><button   class="btn btn-warning type="button"><strong>I'm intrusting </strong></button></div>
    <br><br><br>
    </div>
    `;
