@@ -12,13 +12,16 @@ someGetFunction();
 
 
 function cardTemplate(devices) {
-  return (theMainDiv.innerHTML += `<div class="card col-md-4 col-sm-12">
+  return (phoneTabId.innerHTML += `<div class="card col-md-4 col-sm-12 ">
   <div>
   <img class="card-img col-md-4" src="${SOME_IMG}">
   </div>
-  <div>price : ${devices.price}</div>
   <div>brand : ${devices.brand}</div>
+  <div>brand : ${devices.createdAt}</div>
   <div>color : ${devices.color}</div>
+  <div>brand : ${devices.ram}</div>
+  <div>brand : ${devices.isAvailable}</div>
+  <div>price : ${devices.price}</div>
   <br><br><br>
   </div>
   `);

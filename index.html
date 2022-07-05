@@ -9,24 +9,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./css-pages/main.css" />
   </head>
+
   <body>
     <div id="myDivContainerId" class=" container-fluid bg-black pb-5">
       <div class="container">
-        <nav class="navbar navbar-expand-lg bg-white bg-opacity-50 sticky-sm-top">
+
+        <nav id="liorNavbar" class="navbar navbar-expand-lg bg-white bg-opacity-50 sticky-sm-top">
           <div class="container-fluid">
             <a class="navbar-brand text-white" href="index.html"><img src="./images/icons/sitelogo.gif" width="50vw" id="mySiteLogo" alt=""></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon "><img src="./images/icons/navbar-img.png" width="30vw" alt=""></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
+              <div id="navbarTabsId" class="navbar-nav">
                 <a class="nav-link text-white"href="./html-pages/Phone-Tab.html">Phone-Tabs</a>
                 <a class="nav-link text-white"href="./html-pages/all-information.html">All-Information</a>
                 <a class="nav-link text-white" href="./html-pages/about.html">About</a>
@@ -35,7 +30,9 @@
             </div>
           </div>
         </nav>
-<div id="main" class="container col-sm-12 row-md-4 justify-content-between ">
+
+
+        <div id="main" class="container col-sm-12 row-md-4 justify-content-between ">
 
 <h1 class="card-header text-center text-white mt-5">WELCOME</h1>
 <div class="card-group mt-5">
@@ -95,7 +92,7 @@
        Aspernatur excepturi obcaecati qui sint error exercitationem aliquam accusamus!</p>
        <img class="card-img" src="./images/home-page-images/home-gif3.gif" width="100vw" alt="">
        <div class="row-3 justify-content-center mt-5 d-flex">
-         <button class="btn btn-primary btn-lg justify-content-center">To More info</button>
+         <button class="btn btn-warning btn-lg justify-content-center">To More info</button>
        </div>
 
   </div>
@@ -108,21 +105,20 @@
     </div>
     <div class="col-lg-6">
       <h1 class="display-5 fw-bold lh-1 mb-3 text-white text-opacity-50">some header about lior </h1>
-      <p class="lead text-white text-opacity-25">
+      <p class="lead text-white text-opacity-75">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro maxime et tempora delectus, deserunt sunt? Harum qui quae, iusto distinctio modi est omnis quisquam accusantium? Modi labore, obcaecati neque magni aliquid atque, saepe nobis mollitia quibusdam esse, numquam voluptas nihil?
       </p>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">get it !</button>
+        <button type="button" class="btn btn-warning btn-lg px-4 me-md-2">get it !</button>
       </div>
     </div>
   </div>
 </div>
 
-</div>
+        </div>
 
 
-
-<footer class="container bg-white bg-opacity-50 text-white d-flex sticky-bottom fixed-bottom justify-content-center">
+        <footer class="container bg-white bg-opacity-50 text-white d-flex fixed-bottom justify-content-center">
   <div class="col-sm w-100">
     <div class="row d-flex text-center">
       <div class="col">
@@ -136,10 +132,10 @@
         </div>
     </div>
   </div>
-</footer>
+        </footer>
 
-  </div>
-</div>
+      </div>
+    </div>
 
     <script src="main.js"></script>
   </body>
