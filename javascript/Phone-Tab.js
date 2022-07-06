@@ -1,9 +1,9 @@
 const BASIC_API = "https://my-json-server.typicode.com/Jeck99/fake-server/devices";
 const SOME_IMG = "https://www.digitaltrends.com/wp-content/uploads/2021/09/iphone-13-pro-review-dan-baker-35.jpg?p=1";
 let arrayImg = [
-  "../images/array-images-tabs/samsung-galaxy-s9-grey-3448.webp",
-  "../images/array-images-tabs/samsung-galaxy-s9-gold-3448.webp",
-  "../images/array-images-tabs/apple-white-image-33.jpg",
+  "../images/array-images-tabs/",
+  "../images/array-images-tabs/",
+  "../images/array-images-tabs/",
 ];
 let counter = 0;
 async function getCardsAndPrint() {

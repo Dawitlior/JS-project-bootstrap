@@ -8,7 +8,7 @@ async function getTheUsersFunction() {
       .then((res) => {
         res.forEach((res) => {
           myContainer.innerHTML += `
-          <tbody>
+          <tbody class=''>
           <td>${res._id}</td>
           <td>${res.age}</td>
           <td>${res.name.last}</td>
