@@ -21,6 +21,8 @@ async function getCardsAndPrint() {
    <div>
    <img class="card-img" src="${SOME_IMG}">
   </div>
+  <div> id : ${element.id} </div>
+  
    <div>brand : ${element.brand}</div>
 
     <div>createdAt : ${element.createdAt}</div>

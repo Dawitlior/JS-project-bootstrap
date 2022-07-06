@@ -4,12 +4,12 @@ async function getTheUsersFunction() {
   let myContainer = document.getElementById("myTableId");
   try {
     return await fetch(USERS_API)
-      .then((res) => res.json)
+      .then((res) => res.json())
       .then((res) => {
         res.forEach((res) => {
           myContainer.innerHTML += `
           <tbody>
-          <td>${res.id}</td>
+          <td>${res._id}</td>
           <td>${res.age}</td>
           <td>${res.name.last}</td>
           <td>${res.name.first}</td>
