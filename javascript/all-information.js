@@ -2,7 +2,9 @@ const USERS_API = "https://my-json-server.typicode.com/Jeck99/fake-server/users"
 
 async function getTheUsersFunction() {
   let myContainer = document.getElementById("DivContainer");
+  let myInfoDiv = document.getElementById("allInfoLoadingDiv");
   try {
+    // myInfoDiv.innerHTML = "<img src='../images/waitingGif/loading1.gif' class='rounded mx-auto d-block' style='width:10vw' />";
     return await fetch(USERS_API)
       .then((res) => res.json())
       .then((res) => {
@@ -19,6 +21,7 @@ async function getTheUsersFunction() {
           <div>first name:${res.name.first}</div>
           <div>Email:${res.email}</div>
           <div>Phone:${res.phone}</div>   
+          <div>
           
           `;
         });
@@ -26,6 +29,7 @@ async function getTheUsersFunction() {
   } catch (err) {
     alert(err);
   } finally {
+    myInfoDiv.innerHTML = "";
   }
 }
 getTheUsersFunction();

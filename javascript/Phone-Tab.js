@@ -56,7 +56,7 @@ async function getCardsAndPrint() {
     alert(error);
   } 
   finally {
-    loading.innerHTML = "";
+    loading.innerHTML = " ";
   }
 }
  getCardsAndPrint();
