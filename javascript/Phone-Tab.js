@@ -8,10 +8,10 @@ let arrayImg = [
 let counter = 0;
 async function getCardsAndPrint() {
   let myMainPhoneTabDiv = document.getElementById("phoneTabId");
-  const MY_LOADING_GIPY = document.getElementById("loading");
+  const MY_DIV = document.getElementById("loading");
   try {
-    MY_LOADING_GIPY.innerHTML =
-      "<img style='width:100vw' src='/loading.gif' />"; 
+    MY_DIV.innerHTML =
+      "<img class='rounded mx-auto d-block' style='width:10vw' src='../images/waitingGif/loading2.gif' />"; 
     return await fetch(BASIC_API)
       .then((res) => res.json())
       .then((res) => {
@@ -22,7 +22,7 @@ async function getCardsAndPrint() {
    <img class="card-img" src="${SOME_IMG}">
   </div>
   <div> id : ${element.id} </div>
-  
+
    <div>brand : ${element.brand}</div>
 
     <div>createdAt : ${element.createdAt}</div>
