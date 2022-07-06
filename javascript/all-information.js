@@ -1,16 +1,21 @@
 const USERS_API = "https://my-json-server.typicode.com/Jeck99/fake-server/users";
 
 async function getTheUsersFunction() {
-  let myContainer = document.getElementById("myTableDivContainer");
+  let myContainer = document.getElementById("myTableId");
   try {
     return await fetch(USERS_API)
       .then((res) => res.json)
       .then((res) => {
         res.forEach((res) => {
-          myContainer.innerHTML += 
-          ` <table class="table table-dark table-hover">
-            <tbody> ${res.age}
-          </table>`;
+          myContainer.innerHTML += `
+          <tbody>
+          <td>${res.id}</td>
+          <td>${res.age}</td>
+          <td>${res.name.last}</td>
+          <td>${res.name.first}</td>
+          <td>${res.email}</td>
+          <td>${res.phone}</td>
+          `;
         });
       });
   } catch (err) {
