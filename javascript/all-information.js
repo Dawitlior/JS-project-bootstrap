@@ -1,7 +1,7 @@
 const USERS_API = "https://my-json-server.typicode.com/Jeck99/fake-server/users";
 
 async function getTheUsersFunction() {
-  let myContainer = document.getElementById("DivContainer");
+  let myContainer = document.getElementById("myTableId");
   let myInfoDiv = document.getElementById("allInfoLoadingDiv");
   try {
     // myInfoDiv.innerHTML = "<img src='../images/waitingGif/loading1.gif' class='rounded mx-auto d-block' style='width:10vw' />";
@@ -11,17 +11,13 @@ async function getTheUsersFunction() {
         res.forEach((res) => {
           myContainer.innerHTML += `
           
-          <div class='card col-md-4 col-sm-12 bg-white bg-opacity-50 text-black text-center d-flex'>
-          <div>
-          <img class='card-img' src='../images/all-information-images/user-pic.1.png'
-          </div>
-          <div>Id :${res._id}</div>
-          <div>age : ${res.age} </div>
-          <div>last name:${res.name.last}</div>
-          <div>first name:${res.name.first}</div>
-          <div>Email:${res.email}</div>
-          <div>Phone:${res.phone}</div>   
-          <div>
+           <tbody class='table-responsive'>
+          <td>${res._id}</td>
+          <td>${res.age}</td>
+          <td>${res.name.last}</td>
+          <td>${res.name.first}</td>
+          <td>${res.phone}</td>
+          </tbody>
           
           `;
         });

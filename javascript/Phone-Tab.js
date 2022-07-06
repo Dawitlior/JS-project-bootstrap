@@ -1,5 +1,4 @@
 const BASIC_API = "https://my-json-server.typicode.com/Jeck99/fake-server/devices";
-const SOME_IMG = "https://www.digitaltrends.com/wp-content/uploads/2021/09/iphone-13-pro-review-dan-baker-35.jpg?p=1";
 let arrayImg = [
   "../images/array-images-tabs/sumsong2.webp",
   "../images/array-images-tabs/sumsong4.webp",
@@ -27,7 +26,7 @@ async function getCardsAndPrint() {
       .then(res => res.json())
       .then((response) => {
         response.forEach((element) => {
-          myMainPhoneTabDiv.innerHTML += `<div class="card col-md-4 col-sm-12 bg-black text-white text-start ">
+          myMainPhoneTabDiv.innerHTML += `<div id="" class="card col-md-4 col-sm-12 bg-black text-white text-start ">
    <div>
    <img class="card-img" src="${arrayImg[counter++]}">
   </div>
@@ -45,7 +44,7 @@ async function getCardsAndPrint() {
 
    <div>price : ${element.price}</div>
 
-   <div><button class="btn btn-danger" type="button"><strong>Delete</strong></button></div>
+   <div><button onclick="" class="btn btn-danger" type="button"><strong>Delete</strong></button></div>
    
    </div>
    `;
@@ -59,5 +58,18 @@ async function getCardsAndPrint() {
     loading.innerHTML = " ";
   }
 }
+
  getCardsAndPrint();
 
+//  async function deletePhone(id) {
+//    try {
+//      let response = await fetch(`${BASIC_API}` +"/"+ id);
+//      if (response.status <= 299) document.getElementById(id).remove();
+//    } 
+//    catch(err) {
+//     alert(err);
+//    } 
+//    finally {
+//    }
+//  }
+ 
