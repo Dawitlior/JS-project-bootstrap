@@ -17,6 +17,8 @@ async function getTheUsersFunction() {
           <td>${res.name.last}</td>
           <td>${res.name.first}</td>
           <td>${res.phone}</td>
+          <td>${res.email}</td>
+          <td>${res.index}</td>
           </tbody>
           
           `;
