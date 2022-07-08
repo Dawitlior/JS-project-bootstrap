@@ -21,6 +21,6 @@ async function postUserToTableOfMobileShop(){
         alert(err);
     }
     finally{
-        
+        alert("Thank you")
     }
 }
