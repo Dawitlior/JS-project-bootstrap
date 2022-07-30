@@ -26,7 +26,8 @@ async function getCardsAndPrint() {
       .then(res => res.json())
       .then((response) => {
         response.forEach((element) => {
-          myMainPhoneTabDiv.innerHTML += `<div id="" class="card col-md-4 col-sm-12 bg-black text-white text-start ">
+          myMainPhoneTabDiv.innerHTML += 
+          `<div id="" class="card col-md-4 col-sm-12 bg-black text-white text-start ">
    <div>
    <img class="card-img" src="${arrayImg[counter++]}">
   </div>
